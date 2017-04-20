@@ -1,10 +1,13 @@
 {
   "name": "react-livephotos",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "A react wrapper for apple live photos api.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "babel src/index.js --out-file build.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "react",
@@ -13,5 +16,20 @@
     "api"
   ],
   "author": "Matt Steele <matt@omnionline.us> (http://omnionline.us/)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrsteele/react-livephotos.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.2"
+  },
+  "babel": {
+    "plugins": [
+      "transform-react-jsx"
+    ]
+  }
 }
