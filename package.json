@@ -4,7 +4,7 @@
   "description": "A react wrapper for apple live photos api.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"no test specified\"",
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/index.js -o dist/index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
