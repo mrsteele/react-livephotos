@@ -1,0 +1,17 @@
+{
+  "name": "react-livephotos",
+  "version": "0.0.0",
+  "description": "A react wrapper for apple live photos api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "live",
+    "photos",
+    "api"
+  ],
+  "author": "Matt Steele <matt@omnionline.us> (http://omnionline.us/)",
+  "license": "MIT"
+}
