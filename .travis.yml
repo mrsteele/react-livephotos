@@ -2,6 +2,10 @@ language: node_js
 cache:
   directories:
     - node_modules
+install:
+  - npm install codecov
+script:
+  - ci
 notifications:
   email: false
 node_js:
