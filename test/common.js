@@ -1,7 +1,6 @@
 import jsdom from 'jsdom'
 import chai from 'chai'
 import chaiEnzyme from 'chai-enzyme'
-import 'canvas-prebuilt'
 
 chai.use(chaiEnzyme())
 
