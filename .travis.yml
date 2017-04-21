@@ -3,7 +3,7 @@ cache:
   directories:
     - node_modules
 install:
-  - npm install codecov
+  - npm install
 script:
   - npm run ci
 notifications:
