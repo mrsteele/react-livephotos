@@ -10,10 +10,14 @@ node_js:
   - '4'
 before_install:
   - npm i -g npm@^2.0.0
+  - npm i codeclimate-test-reporter
+  - npm i coverage
 before_script:
   - npm prune
 script:
-  - npm run ci
+  - npm run coverage
+  - codeclimate-test-reporter < coverage/lcov.info
+  - codecov < coverage/lcov.info
 after_success:
   - npm run build
   - npm run semantic-release

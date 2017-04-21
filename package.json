@@ -9,7 +9,6 @@
     "lint": "standard",
     "test": "mocha --compilers js:babel-register --colors",
     "coverage": "nyc --reporter=lcov npm t",
-    "ci": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info & codecov < coverage/lcov.info",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
@@ -33,8 +32,6 @@
     "canvas-prebuilt": "1.6.0",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.6.1",
-    "codeclimate-test-reporter": "^0.4.1",
-    "codecov": "^2.1.0",
     "enzyme": "^2.8.2",
     "jsdom": "^9.12.0",
     "mkdirp": "^0.5.1",
