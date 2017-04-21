@@ -8,9 +8,16 @@ node_js:
   - '7'
   - '6'
   - '4'
+before_install:
+  - npm i -g npm@^2.0.0
+  - npm i -g codeclimate-test-reporter
+  - npm i -g codecov
 before_script:
   - npm prune
+script:
+  - npm run coverage
 after_success:
+  - npm run build
   - npm run semantic-release
 branches:
   except:

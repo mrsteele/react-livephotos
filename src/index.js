@@ -15,11 +15,13 @@ class ReactLivePhotos extends Component {
   }
 
   componentDidMount() {
-    const { photoSrc, videoSrc } = this.props
+    const { className, ...props } = this.props
     this.player = LivePhotosKit.Player()
-    this.player.photoSrc = photoSrc
-    this.player.videoSrc = videoSrc
     this.player.proactivelyLoadsVideo = true
+
+    for (let key in props) {
+      this.player[key] = props[key]
+    }
 
     this.player.addEventListener('photoload', this.syncSize)
     this.el.appendChild(this.player)
