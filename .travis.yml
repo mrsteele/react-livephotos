@@ -15,7 +15,7 @@ before_install:
 before_script:
   - npm prune
 script:
-  - npm run coverage && codeclimate-test-reporter < coverage/lcov.info && codecov < coverage/lcov.info
+  - npm run coverage
 after_success:
   - npm run build
   - npm run semantic-release
