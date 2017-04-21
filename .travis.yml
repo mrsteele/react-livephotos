@@ -10,8 +10,8 @@ node_js:
   - '4'
 before_install:
   - npm i -g npm@^2.0.0
-  - npm i codeclimate-test-reporter
-  - npm i coverage
+  - npm i -g codeclimate-test-reporter
+  - npm i -g coverage
 before_script:
   - npm prune
 script:
