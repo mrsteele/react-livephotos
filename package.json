@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/index.js | uglifyjs > dist/index.js",
     "coverage": "nyc --reporter=lcov npm t",
-    "ci": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info && codecov < coverage/lcov.info",
+    "ci": "npm run coverage && cat coverage/lcov.info && codeclimate-test-reporter < coverage/lcov.info && codecov < coverage/lcov.info",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
