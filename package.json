@@ -4,12 +4,12 @@
   "description": "A react wrapper for apple live photos api.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
-    "test": "mocha --compilers js:babel-register --colors",
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/index.js | uglifyjs > dist/index.js",
+    "lint": "standard",
+    "test": "mocha --compilers js:babel-register --colors",
     "coverage": "nyc --reporter=lcov npm t",
-    "ci": "npm run coverage && cat src/index.js && cat coverage/lcov.info",
+    "ci": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info & codecov < coverage/lcov.info",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
@@ -65,6 +65,12 @@
       "babel-register"
     ],
     "sourceMap": false,
-    "instrument": false
+    "instrument": false,
+    "include": [
+      "src/**"
+    ],
+    "exclude": [
+      "**/node_modules/**"
+    ]
   }
 }
