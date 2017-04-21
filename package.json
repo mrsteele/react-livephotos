@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "pretest": "npm run build",
     "test": "mocha --compilers js:babel-register --colors",
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/index.js | uglifyjs > dist/index.js",
