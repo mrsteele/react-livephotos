@@ -23,7 +23,7 @@ export default ({...props}) => (
 
 ### Properties
 
-We support all the properties provided by (LivePhotosKit.Player)[https://developer.apple.com/reference/livephotoskitjs/livephotoskit.player]. The only one we allow is `className` which is added to the wrapping span element around the player.
+We support all the properties provided by [LivePhotosKit.Player](https://developer.apple.com/reference/livephotoskitjs/livephotoskit.player). The only one we allow is `className` which is added to the wrapping span element around the player.
 
 ### License
 
