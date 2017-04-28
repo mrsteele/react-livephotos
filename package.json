@@ -2,8 +2,8 @@
   "name": "react-livephotos",
   "version": "0.0.0-development",
   "description": "A react wrapper for apple live photos api.",
-  "browser": "./browser.js",
-  "main": "index.js",
+  "browser": "./dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/index.js | uglifyjs > dist/index.js",
