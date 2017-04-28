@@ -19,7 +19,7 @@ class ReactLivePhotos extends Component {
   }
 
   componentDidMount () {
-    const { className, ...props } = this.props
+    const { className, width, height, ...props } = this.props
     this.player = LivePhotosKit.Player()
     this.player.proactivelyLoadsVideo = true
 

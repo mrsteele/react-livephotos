@@ -25,7 +25,7 @@ export default ({...props}) => (
 
 ### Properties
 
-We support all the properties provided by (LivePhotosKit.Player)[https://developer.apple.com/reference/livephotoskitjs/livephotoskit.player].
+We support all the properties provided by [LivePhotosKit.Player](https://developer.apple.com/reference/livephotoskitjs/livephotoskit.player).
 
 The following are specific to this module:
 
