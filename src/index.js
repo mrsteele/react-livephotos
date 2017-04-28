@@ -2,20 +2,24 @@ import * as LivePhotosKit from 'livephotoskit'
 import React, { Component, PropTypes } from 'react'
 
 class ReactLivePhotos extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.syncSize = this.syncSize.bind(this)
   }
 
-  syncSize() {
-    this.player.style.width = `${this.player.photoWidth}px`
-    this.player.style.height = `${this.player.photoHeight}px`
+  syncSize () {
+    const { width, height } = this.props
+    const photoWidth = width || this.player.photoWidth
+    const photoHeight = height || this.player.photoHeight
+
+    this.player.style.width = `${photoWidth}px`
+    this.player.style.height = `${photoHeight}px`
     // this.player.updateSize(100)
   }
 
-  componentDidMount() {
-    const { className, ...props } = this.props
+  componentDidMount () {
+    const { className, width, height, ...props } = this.props
     this.player = LivePhotosKit.Player()
     this.player.proactivelyLoadsVideo = true
 
@@ -30,11 +34,11 @@ class ReactLivePhotos extends Component {
     this.el.style.display = 'inline-block'
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.el.removeChild(this.player)
   }
 
-  render() {
+  render () {
     return (
       <span ref={(el) => { this.el = el }} />
     )
@@ -44,6 +48,8 @@ class ReactLivePhotos extends Component {
 ReactLivePhotos.propTypes = {
   photoSrc: PropTypes.string,
   videoSrc: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number
 }
 
 export default ReactLivePhotos
